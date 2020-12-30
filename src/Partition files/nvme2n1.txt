@@ -1,0 +1,10 @@
+# partition table of /dev/nvme2n1
+unit: sectors
+
+/dev/nvme2n1p1 : start=     2048, size=   389120, Id=fd
+/dev/nvme2n1p2 : start=   393216, size=   387072, Id=fd
+/dev/nvme2n1p3 : start=   782336, size=   389120, Id=fd
+/dev/nvme2n1p4 : start=  1173504, size=  2928640, Id= f
+/dev/nvme2n1p5 : start=  1175552, size=   387072, Id=fd
+/dev/nvme2n1p6 : start=  1564672, size=   389120, Id=fd
+/dev/nvme2n1p7 : start=  1955840, size=   387072, Id=fd

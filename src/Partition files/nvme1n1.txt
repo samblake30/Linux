@@ -1,0 +1,7 @@
+# partition table of /dev/nvme1n1
+unit: sectors
+
+/dev/nvme1n1p1 : start=     2048, size=   409600, Id=fd
+/dev/nvme1n1p2 : start=   411648, size=   409600, Id=fd
+/dev/nvme1n1p3 : start=   821248, size=   409600, Id=fd
+/dev/nvme1n1p4 : start=        0, size=        0, Id= 0
