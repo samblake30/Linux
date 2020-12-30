@@ -41,43 +41,21 @@ Device Name      |  Partition Table Info
    ```
    
    ```bash
-  [root@b1e95f64d31c ~]# parted -l /dev/nvme2n1
-  Model: NVMe Device (nvme)
-  Disk /dev/nvme0n1: 21.5GB
-  Sector size (logical/physical): 512B/512B
-  Partition Table: msdos
-  Disk Flags: 
+   [root@b1e95f64d31c ~]# parted /dev/nvme2n1 print
+   Model: NVMe Device (nvme)
+   Disk /dev/nvme2n1: 2147MB
+   Sector size (logical/physical): 512B/512B
+   Partition Table: msdos
+   Disk Flags: 
 
-  Number  Start   End     Size    Type     File system  Flags 
-  1      1049kB  21.5GB  21.5GB  primary  xfs          boot
-
-
-  Model: NVMe Device (nvme)
-  Disk /dev/nvme1n1: 2147MB
-  Sector size (logical/physical): 512B/512B 
-  Partition Table: msdos
-  Disk Flags: 
-
-  Number  Start   End    Size   Type     File system  Flags
-  1      1049kB  211MB  210MB  primary               raid
-  2      211MB   420MB  210MB  primary               raid
-  3      420MB   630MB  210MB  primary               raid
-
-
-  Model: NVMe Device (nvme)
-  Disk /dev/nvme2n1: 2147MB
-  Sector size (logical/physical): 512B/512B
-  Partition Table: msdos
-  Disk Flags: 
-
-  Number  Start   End     Size    Type      File system  Flags
-  1      1049kB  200MB   199MB   primary                raid
-  2      201MB   400MB   198MB   primary                raid
-  3      401MB   600MB   199MB   primary                raid
-  4      601MB   2100MB  1499MB  extended               lba
-  5      602MB   800MB   198MB   logical                raid
-  6      801MB   1000MB  199MB   logical                raid
-  7      1001MB  1200MB  198MB   logical                raid
+   Number  Start   End     Size    Type      File system  Flags
+   1      1049kB  200MB   199MB   primary                raid
+   2      201MB   400MB   198MB   primary                raid
+   3      401MB   600MB   199MB   primary                raid
+   4      601MB   2100MB  1499MB  extended               lba
+   5      602MB   800MB   198MB   logical                raid
+   6      801MB   1000MB  199MB   logical                raid
+   7      1001MB  1200MB  198MB   logical                raid
   ```
 
  * _Check for the mdadm utility is installed_
