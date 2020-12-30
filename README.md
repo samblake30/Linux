@@ -11,7 +11,7 @@
   <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/images/img1.png">  
 </p>
 
-### ***Note:*** _Here we will create partition using both inbuilt utilities called ```fdisk``` and ```parted```_
+### ***Note:*** _Here we can create partition using both inbuilt utilities ```fdisk``` and ```parted``` but, for demo I have already taken backup of the partition tables created manually using the above mentioned utilities and here with the help of the ```sfdisk``` utility we will restore the partition table with correct label and sizes._
 
  * _Create 3 partitions in /dev/nvme1n1 device_
 <p align="centre">
