@@ -84,7 +84,7 @@ Device Name      |  Partition Table Info
     ```bash
     rpm -q mdadm
     ```
-    * _If not installed then run below command_
+    * _If not installed then run below command_ :point_down:
     ```bash
     yum install -y mdadm
     ```
