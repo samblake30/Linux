@@ -81,6 +81,7 @@ Device Name      |  Partition Table Info
   ```
 
  * _Check for the mdadm utility is installed_
+    :+1:
     ```bash
     rpm -q mdadm
     ```
