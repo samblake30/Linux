@@ -8,5 +8,5 @@
 ### _Steps to perform_
  * _First check if the attached disks are available_
  <p align="centre">
-  <img width="250" height="250" src="https://github.com/samblake30/Docker-Jenkins/blob/master/images/jenkins.PNG">  
+  <img width="250" height="250" src="https://github.com/samblake30/Linux/blob/main/images/img1.png">  
 </p>
