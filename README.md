@@ -34,3 +34,48 @@ Device Name      |  Partition Table Info
    ├─nvme1n1p2 259:5    0  200M  0 part
    └─nvme1n1p3 259:6    0  200M  0 part
    ```
+* _Create 7 partitions in /dev/nvme2n1 with 3 as primary 1 as extended and 3 as logical_
+
+   ```bash
+   sfdisk /dev/nvme1n1 < nvme1n1.txt
+   ```
+   
+   ```bash
+  [root@b1e95f64d31c ~]# parted -l /dev/nvme2n1
+  Model: NVMe Device (nvme)
+  Disk /dev/nvme0n1: 21.5GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: msdos
+  Disk Flags: 
+
+  Number  Start   End     Size    Type     File system  Flags 
+  1      1049kB  21.5GB  21.5GB  primary  xfs          boot
+
+
+  Model: NVMe Device (nvme)
+  Disk /dev/nvme1n1: 2147MB
+  Sector size (logical/physical): 512B/512B 
+  Partition Table: msdos
+  Disk Flags: 
+
+  Number  Start   End    Size   Type     File system  Flags
+  1      1049kB  211MB  210MB  primary               raid
+  2      211MB   420MB  210MB  primary               raid
+  3      420MB   630MB  210MB  primary               raid
+
+
+  Model: NVMe Device (nvme)
+  Disk /dev/nvme2n1: 2147MB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: msdos
+  Disk Flags: 
+
+  Number  Start   End     Size    Type      File system  Flags
+  1      1049kB  200MB   199MB   primary                raid
+  2      201MB   400MB   198MB   primary                raid
+  3      401MB   600MB   199MB   primary                raid
+  4      601MB   2100MB  1499MB  extended               lba
+  5      602MB   800MB   198MB   logical                raid
+  6      801MB   1000MB  199MB   logical                raid
+  7      1001MB  1200MB  198MB   logical                raid
+   ```
