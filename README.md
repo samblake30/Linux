@@ -23,8 +23,14 @@ Device Name      |  Partition Table Info
 
  * _Create 3 partitions in /dev/nvme1n1 device_
    ```bash
-   sfdisk /dev/nvme1n1 < nvme1n1.txt 
+   sfdisk /dev/nvme1n1 < nvme1n1.txt
    ```
-<p align="centre">
-  <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/src/img1.png">  
-</p>
+   
+   ```bash
+   [root@b1e95f64d31c ~]# lsblk /dev/nvme1n1
+   NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+   nvme1n1     259:0    0    2G  0 disk
+   ├─nvme1n1p1 259:4    0  200M  0 part
+   ├─nvme1n1p2 259:5    0  200M  0 part
+   └─nvme1n1p3 259:6    0  200M  0 part
+   ```
