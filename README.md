@@ -1,4 +1,4 @@
-# _Configure the system RAID_
+# _Configure the System RAID_
 
 ## _Prequisite:-_
  *  _Centos 7 Machine_
@@ -78,4 +78,13 @@ Device Name      |  Partition Table Info
   5      602MB   800MB   198MB   logical                raid
   6      801MB   1000MB  199MB   logical                raid
   7      1001MB  1200MB  198MB   logical                raid
-   ```
+  ```
+
+ * _Check for the mdadm utility is installed_
+    ```bash
+    rpm -q mdadm
+    ```
+    * _If not installed then run below command_
+    ```bash
+    yum install -y mdadm
+    ```
