@@ -22,7 +22,9 @@ Device Name      |  Partition Table Info
 
 
  * _Create 3 partitions in /dev/nvme1n1 device_
-   ```sfdisk /dev/nvme1n1 < nvme1n1.txt ```
+   ```bash
+   sfdisk /dev/nvme1n1 < nvme1n1.txt 
+   ```
 <p align="centre">
   <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/src/img1.png">  
 </p>
