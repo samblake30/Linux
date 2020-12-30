@@ -7,6 +7,13 @@
  
 ### _Steps to perform_
  * _First check if the attached disks are available_
- <p align="centre">
-  <img width="250" height="250" src="https://github.com/samblake30/Linux/blob/main/images/img1.png">  
+<p align="centre">
+  <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/images/img1.png">  
+</p>
+
+### ***Note:*** _Here we will create partition using both inbuilt utilities called ```fdisk``` and ```parted```_
+
+ * _Create 3 partitions in /dev/nvme1n1 device_
+<p align="centre">
+  <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/images/img1.png">  
 </p>
