@@ -1,4 +1,4 @@
-# _Configure the system RAID using mdadm_
+# _Configure the system RAID_
 
 ## _Prequisite:-_
  *  _Centos 7 Machine_
