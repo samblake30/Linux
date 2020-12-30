@@ -17,8 +17,8 @@
 
 Device Name      |  Partition Table Info
 -----------      | --------------------
-:point_right: _/dev/nvme1n1_  | ***![nvme1n1.txt](https://github.com/samblake30/Linux/blob/main/src/Partition%20files/nvme1n1.txt)***
-:point_right: _/dev/nvme2n1_  | ***![nvme2n1.txt](https://github.com/samblake30/Linux/blob/main/src/Partition%20files/nvme2n1.txt)***
+:point_right: _/dev/nvme1n1_  | ***![nvme1n1.txt](https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/Partition%20files/nvme1n1.txt)***
+:point_right: _/dev/nvme2n1_  | ***![nvme2n1.txt](https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/Partition%20files/nvme2n1.txt)***
 
 
  * _Create 3 partitions in /dev/nvme1n1 device_
