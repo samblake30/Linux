@@ -13,11 +13,12 @@
 
 ### ***Note:*** _Here we can create partition using both inbuilt utilities ![fdisk](https://img.shields.io/badge/Utility-fdisk-yellow?style=plastic&logo=appveyor) and ![parted](https://img.shields.io/badge/Utility-Parted-orange?style=plastic&logo=appveyor) but, for demo I have already taken backup of the partition tables created manually using the above mentioned utilities and here with the help of the ![sfdisk](https://img.shields.io/badge/Utility-sfdisk-brightgreen?style=plastic&logo=appveyor) we will restore the partition table with correct label and sizes._
 
-### _Partition Table files :-_
+### _Partition Table files:-_
 
-Device Name                    |   Partition Table Info 
---------------------------------------------------------
-
+Device Name      |  Partition Table Info
+-----------      | --------------------
+:point_right: _/dev/nvme1n1_  | ***![nvme1n1.txt]()***
+:point_right: _/dev/nvme2n1_  | ***![nvme2n1.txt]()***
 
 
  * _Create 3 partitions in /dev/nvme1n1 device_
