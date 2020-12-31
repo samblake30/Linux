@@ -149,7 +149,7 @@ Device Name      |  Partition Table Info
    ```bash
    # blkid 
    ```
-   * _***/etc/FSTAB*** Contents_<p align="left"><img width="950" height="100" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG">  
+   * _***/etc/FSTAB*** Contents_<p align="left"><img width="950" height="90" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG">  
 </p>
 
     
