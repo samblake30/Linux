@@ -149,9 +149,7 @@ Device Name      |  Partition Table Info
    ```bash
    # blkid 
    ```
-   * _***/etc/fstab*** Contents_<p align="left"><img width="950" height="70" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG">  
-</p>
-   
+   * _***/etc/fstab*** Contents_<p align="left"><img width="950" height="70" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG"></p>
    
    * _Umount and try to read and mount the device array from fstab file_
     ```bash
