@@ -70,7 +70,11 @@ Device Name      |  Partition Table Info
  * _Creating the Software RAID using mdadm._
  
     * _Here we create a new device of RAID level 5 with 3 active devices and 3 spare devices for fault tolerance and backup._
-    
     ```bash
-    mdadm -C /dev/md0 -l raid5 -n 3 /dev/nvme1n1p1 /dev/nvme1n1p2 /dev/nvme1n1p3 
+    mdadm -C /dev/md0 -l raid5 -n 3 /dev/nvme1n1p1 /dev/nvme1n1p2 /dev/nvme1n1p3 -x 3 /dev/nvme2n1p1 /dev/nvme2n1p2 /dev/nvme2n1p3
+    ```
+    * _Verify the creation of the new RAID device_
+    ```bash
+    [root@b1e95f64d31c ~]# ls /dev/md0
+    /dev/md0
     ```
