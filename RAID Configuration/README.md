@@ -128,7 +128,7 @@ Device Name      |  Partition Table Info
     * _To make the configuration persisitent to reboot we will create the mdadm.conf file_
           * _So now we will scan our device with ``-s or --scan_`` with ``-v`` to get the output and redirect it into the configuration file_
     ```bash
-    [root@b1e95f64d31c ~]# mdadm -D -s -v > /etc/mdadm.conf
+    # mdadm -D -s -v > /etc/mdadm.conf
     ```
     
     
