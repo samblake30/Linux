@@ -78,7 +78,7 @@ Device Name      |  Partition Table Info
     [root@b1e95f64d31c ~]# ls /dev/md*
     /dev/md0
     ```
-    * _Details of the device can also be obtained_
+    * _Details of the device can also be obtained using ``-D`` flag or ``--detail``_
     ```bash
     [root@b1e95f64d31c ~]# mdadm -D /dev/md0
     /dev/md0:
