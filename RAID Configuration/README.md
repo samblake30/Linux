@@ -130,5 +130,25 @@ Device Name      |  Partition Table Info
     ```bash
     # mdadm -D -s -v > /etc/mdadm.conf
     ```
+   * _Create Mount point for new created array_
+   ```bash
+   mkdir /mnt/data
+   mkdir /mnt/data/backup
+   ```
+   * _Now we will create the filesystem on the array_
+   ```bash
+   mkfs -t ext4 /dev/md0
+   ```
+   * _Now we mount this array on /dev/md0 array and can check it using ```df -h``` also we will create a new directory inside this after mounting called backup and copy the etc contents inside of it_
+   ```bash
+   mount /dev/md0 /mnt/data
+   mkdir /mnt/data/backup
+   cp -rf /etc/* /mnt/data/backup
+   ```
+   * _To make it persist any reboot we need to add this entry to our ***/etc/fstab*** file so, for it we need to ``UUID`` of the array we created_
+   ```bash
+   # blkid 
+   ```
+   * we
     
     
