@@ -149,6 +149,13 @@ Device Name      |  Partition Table Info
    ```bash
    # blkid 
    ```
-   * we
-    
+   * _***/etc/FSTAB*** Contents_
+   <p align="centre">
+  <img width="950" height="150" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.png">  
+</p>
+
+   * _Umount it and try to read the same partition from ***/etc/fstab***_
+   ```bash
+   # mount -a
+   ```
     
