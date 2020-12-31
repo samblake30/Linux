@@ -75,6 +75,6 @@ Device Name      |  Partition Table Info
     ```
     * _Verify the creation of the new RAID device_
     ```bash
-    [root@b1e95f64d31c ~]# ls /dev/md0
+    [root@b1e95f64d31c ~]# ls /dev/md*
     /dev/md0
     ```
