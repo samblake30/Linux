@@ -126,12 +126,9 @@ Device Name      |  Partition Table Info
     unused devices: <none>
     ```
     * _To make the configuration persisitent to reboot we will create the mdadm.conf file_
-          * _So now we will scan our device with ``-s or --scan_`` with ``-v`` to get the output to put directly into the configuration file_
+          * _So now we will scan our device with ``-s or --scan_`` with ``-v`` to get the output and redirect it into the configuration file_
     ```bash
-    [root@b1e95f64d31c ~]# mdadm -D -s -v 
-    ARRAY /dev/md0 level=raid5 num-devices=3 metadata=1.2 spares=3 name=b1e95f64d31c.mylabserver.com:0 UUID=edc168fe:082e62d2:7183995d:7bd4
-    e9ed
-    devices=/dev/nvme1n1p1,/dev/nvme1n1p2,/dev/nvme1n1p3,/dev/nvme2n1p1,/dev/nvme2n1p2,/dev/nvme2n1p3
+    [root@b1e95f64d31c ~]# mdadm -D -s -v > /etc/mdadm.conf
     ```
     
     
