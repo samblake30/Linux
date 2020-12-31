@@ -153,7 +153,7 @@ Device Name      |  Partition Table Info
 </p>
    
    
-    * _Umount and try to read and mount the device array from fstab file_
+   * _Umount and try to read and mount the device array from fstab file_
     ```bash
     # Umount /mnt/data
     # mount -a
