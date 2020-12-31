@@ -78,3 +78,41 @@ Device Name      |  Partition Table Info
     [root@b1e95f64d31c ~]# ls /dev/md*
     /dev/md0
     ```
+    * _Details of the device can also be obtained_
+    ```bash
+    [root@b1e95f64d31c ~]# mdadm -D /dev/md0
+    /dev/md0:
+           Version : 1.2
+     Creation Time : Thu Dec 31 05:32:24 2020
+        Raid Level : raid5
+        Array Size : 382976 (374.00 MiB 392.17 MB)
+     Used Dev Size : 191488 (187.00 MiB 196.08 MB)
+      Raid Devices : 3
+     Total Devices : 6
+       Persistence : Superblock is persistent
+
+       Update Time : Thu Dec 31 05:34:39 2020
+             State : clean 
+    Active Devices : 3
+    Working Devices : 6
+    Failed Devices : 0
+    Spare Devices : 3
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+    Consistency Policy : resync
+
+              Name : b1e95f64d31c.mylabserver.com:0  (local to host b1e95f64d31c.mylabserver.com)
+              UUID : edc168fe:082e62d2:7183995d:7bd4e9ed
+            Events : 18
+
+    Number   Major   Minor   RaidDevice State
+       0     259        2        0      active sync   /dev/nvme1n1p1
+       1     259        3        1      active sync   /dev/nvme1n1p2
+       6     259        4        2      active sync   /dev/nvme1n1p3
+
+       3     259        5        -      spare   /dev/nvme2n1p1
+       4     259        6        -      spare   /dev/nvme2n1p2
+       5     259        7        -      spare   /dev/nvme2n1p3
+    ```
