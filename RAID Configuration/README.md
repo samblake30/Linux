@@ -116,3 +116,12 @@ Device Name      |  Partition Table Info
        4     259        6        -      spare   /dev/nvme2n1p2
        5     259        7        -      spare   /dev/nvme2n1p3
     ```
+    --------------------------------------------------------------```OR```-----------------------------------------------------------------------'
+    ```bash
+    [root@b1e95f64d31c ~]# cat /proc/mdstat
+    Personalities : [raid6] [raid5] [raid4] 
+    md0 : active raid5 nvme1n1p3[6] nvme2n1p3[5](S) nvme2n1p2[4](S) nvme2n1p1[3](S) nvme1n1p2[1] nvme1n1p1[0]
+      382976 blocks super 1.2 level 5, 512k chunk, algorithm 2 [3/3] [UUU]
+      
+    unused devices: <none>
+    ```
