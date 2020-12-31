@@ -149,10 +149,7 @@ Device Name      |  Partition Table Info
    ```bash
    # blkid 
    ```
-   * _***/etc/FSTAB*** Contents_<p align="centre"><img width="950" height="100" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG">  
+   * _***/etc/FSTAB*** Contents_<p align="left"><img width="950" height="100" src="https://github.com/samblake30/Linux/blob/main/RAID%20Configuration/src/img2.PNG">  
 </p>
-   * _Umount it and try to read the same partition from fstab file_
-   ```bash
-   # mount -a
-   ```
+
     
