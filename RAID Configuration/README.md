@@ -67,3 +67,7 @@ Device Name      |  Partition Table Info
     ```bash
     yum install -y mdadm
     ```
+ * _Creating the Software RAID using mdadm. Here we create a new device of RAID level 5 with 3 active devices_
+    ```bash
+    mdadm -C /dev/md0 -l raid5 -n 3 /dev/nvme1n1p1 /dev/nvme1n1p2 /dev/nvme1n1p3
+    ```
