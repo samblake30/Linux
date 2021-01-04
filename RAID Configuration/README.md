@@ -164,10 +164,10 @@ Device Name      |  Partition Table Info
    ```
    * _Now the rebuild process will start and spare devices takes place of the faulty drive_
    ```bash
-       1     259        3        1      active sync   /dev/nvme1n1p2
+       1     259        3        1      active sync   /dev/nvme1n1p2 👈
        6     259        4        2      active sync   /dev/nvme1n1p3
 
-       0     259        2        -      faulty   /dev/nvme1n1p1
+       0     259        2        -      faulty   /dev/nvme1n1p1 👈
        3     259        5        -      spare   /dev/nvme2n1p1
        4     259        6        -      spare   /dev/nvme2n1p2
    ```
