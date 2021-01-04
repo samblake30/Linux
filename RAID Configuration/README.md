@@ -156,5 +156,19 @@ Device Name      |  Partition Table Info
     # Umount /mnt/data
     # mount -a
     ```
+ * _Managing Failover and Recovery of RAID Devices_
+   * _Now here we will fail one device and observe the rebuild status of a spare device taking its place. Make sure we dont fail 2 devices at a time or we will lose the data_
+   ```bash
+   [root@b1e95f64d31c ~]# mdadm -f  /dev/md0 /dev/nvme1n1p1
+   mdadm: set /dev/nvme1n1p1 faulty in /dev/md0
+   ```
+   * _Now the rebuild process will start and spare devices takes place of the faulty drive_
+   ```bash
+       1     259        3        1      active sync   /dev/nvme1n1p2
+       6     259        4        2      active sync   /dev/nvme1n1p3
 
+       0     259        2        -      faulty   /dev/nvme1n1p1
+       3     259        5        -      spare   /dev/nvme2n1p1
+       4     259        6        -      spare   /dev/nvme2n1p2
+   ```
     
