@@ -206,4 +206,11 @@ Device Name      |  Partition Table Info
        3     259        5        1      active sync   /dev/nvme2n1p1
        4     259        6        2      spare rebuilding   /dev/nvme2n1p2
        ```
+       ```bash
+       [root@b1e95f64d31c ~]# mdadm -r /dev/md0 /dev/nvme1n1p1 /dev/nvme1n1p2 /dev/nvme1n1p3
+       mdadm: hot removed /dev/nvme1n1p1 from /dev/md0
+       mdadm: hot removed /dev/nvme1n1p2 from /dev/md0
+       mdadm: hot removed /dev/nvme1n1p3 from /dev/md0
+       ```
+       
     
