@@ -171,4 +171,39 @@ Device Name      |  Partition Table Info
        3     259        5        -      spare   /dev/nvme2n1p1
        4     259        6        -      spare   /dev/nvme2n1p2
    ```
+   * _Similarly we will replace all the active with the spare one's as above and remove the failed devices from the array_
+   ```bash
+   /dev/md0:
+           Version : 1.2
+     Creation Time : Thu Dec 31 05:32:24 2020
+        Raid Level : raid5
+        Array Size : 382976 (374.00 MiB 392.17 MB)
+     Used Dev Size : 191488 (187.00 MiB 196.08 MB)
+      Raid Devices : 3
+     Total Devices : 6
+       Persistence : Superblock is persistent
+
+       Update Time : Mon Jan  4 11:50:23 2021
+             State : clean, degraded, recovering
+    Active Devices : 2
+   Working Devices : 3
+    Failed Devices : 3
+     Spare Devices : 1
+
+            Layout : left-symmetric
+        Chunk Size : 512K
+
+    Consistency Policy : resync
+
+    Rebuild Status : 20% complete
+
+              Name : b1e95f64d31c.mylabserver.com:0  (local to host b1e95f64d31c.mylabserver.com)
+              UUID : edc168fe:082e62d2:7183995d:7bd4e9ed
+            Events : 63
+
+    Number   Major   Minor   RaidDevice State
+       5     259        7        0      active sync   /dev/nvme2n1p3
+       3     259        5        1      active sync   /dev/nvme2n1p1
+       4     259        6        2      spare rebuilding   /dev/nvme2n1p2
+       ```
     
