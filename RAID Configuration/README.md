@@ -255,5 +255,8 @@ Device Name      |  Partition Table Info
        7     259       10        -      spare   /dev/nvme2n1p6
        8     259       11        -      spare   /dev/nvme2n1p7
     ```
-       
+    * _Add this new information back to the main configuration ***```/etc/mdadm.conf```*** to make it persistent_
+    ```bash
+    # mdadm -D -s -v >/etc/mdadm.conf
+    ```
     
