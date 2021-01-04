@@ -251,9 +251,9 @@ Device Name      |  Partition Table Info
        3     259        5        1      active sync   /dev/nvme2n1p1
        4     259        6        2      active sync   /dev/nvme2n1p2
 
-       6     259        9        -      spare   /dev/nvme2n1p5
-       7     259       10        -      spare   /dev/nvme2n1p6
-       8     259       11        -      spare   /dev/nvme2n1p7
+       6     259        9        -      spare   /dev/nvme2n1p5 👈
+       7     259       10        -      spare   /dev/nvme2n1p6 👈
+       8     259       11        -      spare   /dev/nvme2n1p7 👈
     ```
     * _Add this new information back to the main configuration ***```/etc/mdadm.conf```*** to make it persistent_
     ```bash
