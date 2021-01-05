@@ -1,6 +1,6 @@
 # _Configure the System RAID_
 
-## _Prequisite:-_
+## _Prerequisite:-_
  *  _Centos 7 Machine_
  * _mdadm package installed_
  * _Two Data Volumes attached  to machine for performing the RAID_
