@@ -18,7 +18,7 @@
 ***_Note_:-*** _You’ll also need a user account with sudo privileges and access to the root user account._
 
 ### _Steps for Kubernetes Cluster Configuration:-_
-   * ***Steps1:-*** _Set Hostname with its IP address_
+   * ***Step1:-*** _Set Hostname with its IP address_
       * _Chanage the Hostname and add the Hostname of all Hosts with those IP address in the ```/etc/hosts``` file (Consider all Hosts or VM as Nodes) as below_
       ```bash
          hostnamectl set-hostname k8s-app01
@@ -28,6 +28,34 @@
          192.168.3.50 k8s-app02
          192.168.5.51 k8s-app03
       ```
+   * ***Step2:-*** _Update the OS packages_
+      ```bash
+      yum update -y
+      ```
+   * ***Step3:-*** _Disable the SElinux or change the mode to permissive this will help all containers access the host filesystem_
+      ```bash
+      setenforce 0
+      sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+      ```
+   * ***Step4:-*** _Allow the below ports in the firewall or in the security group of the instance_
+      * ***Master Node***
+         Service      |  Ports   | Protocol
+         -----------      | --------------------   | --------------------
+         _Kube-APIServer_                           :point_right:  | ***6443***        | ***TCP***
+         _ETCD_                                     :point_right:  | ***2379 - 2380*** | ***TCP***
+         _Kubelet HealthCheck Port_                 :point_right:  | ***10250***       | ***TCP***
+         _Kube-Scheduler_                           :point_right:  | ***10251***       | ***TCP***
+         _Kube-Controller-manager_                  :point_right:  | ***10252***       | ***TCP***
+         _Read-Only Kubelet-API_                    :point_right:  | ***10255***       | ***TCP***
+       
+       * ***Worker Node***
+          Service     | Ports   | Protocol
+          ----------      | --------------------   | ---------------------
+          _Kubelet-API_                             :point_right:  | ***10250***         | ***TCP***
+          _Read-Only Kubelet-API_                   :point_right:  | ***10255***         | ***TCP***
+          _NodePort Services_                       :point_right:  | ***30000 - 32767*** | ***TCP***
+       
+      
 
       
 
