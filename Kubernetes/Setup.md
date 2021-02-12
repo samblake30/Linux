@@ -128,4 +128,13 @@ _When you run pods, they will be allocated IP addresses from the pod network CID
    * ***Step12:-*** _Join the worker nodes to master node either from command provided from ```step8``` or generate the new token with print join command_
       ```bash
       ~ kubeadm token create --print-join-command
-      ```      
+      ```
+   * ***Step13:-*** _Check for nodes in Ready state now_
+      ```bash
+      ~ kubectl get nodes
+      NAME        STATUS   ROLES                  AGE   VERSION
+      k8s-app01   Ready    control-plane,master   27h   v1.20.2
+      k8s-app02   Ready    worker1                27h   v1.20.2
+      k8s-app03   Ready    worker2                27h   v1.20.2
+      ```
+
