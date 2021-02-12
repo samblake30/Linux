@@ -54,8 +54,8 @@
           _Kubelet-API_                             :point_right:  | ***10250***         | ***TCP***
           _Read-Only Kubelet-API_                   :point_right:  | ***10255***         | ***TCP***
           _NodePort Services_                       :point_right:  | ***30000 - 32767*** | ***TCP***
-    * ***Step5:-*** _To Install Docker and Kubernetes in nodes, need to configure docker and Kubernetes repositories_
-       * _Kubernetes Repo_
+   * ***Step5:-*** _To Install Docker and Kubernetes in nodes, need to configure docker and Kubernetes repositories_
+      * _Kubernetes Repo_
        ```bash
        ~ cat << EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
        > [kubernetes]
