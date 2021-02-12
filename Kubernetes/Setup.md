@@ -82,7 +82,22 @@
       #On Worker
       ~ yum install kubelet docker -y
       ```
-    
+   * ***Step7:-*** _Enable and Start Docker and Kubernetes Services_
+      ```bash
+      ~ systemctl enable --now docker
+      ~ systemctl enable --now kubelet
+      ```
+   * ***Step8:-*** _Run the Cluster configuration on the Master/Control Plane node._
+      ```bash
+      ~ kubeadm init --pod-network-cidr=10.244.0.0/16
+      ```
+      * _You can see the output from above command. After the successful start of kubadm master, we need to run the shown command from the non-root or root user then only a user can control the kubectl commands._
+      ```bash
+      ~ mkdir -p $HOME/.kube
+      ~ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+      ~ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+      ```
+      
       
 
       
