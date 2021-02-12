@@ -2,7 +2,15 @@
 
 ## _General Description_
  * _Kubernetes is simply to automate our application infrastructure and make it easy to manage.So if we're using containers and we have this application infrastructure that's built on containers, Kubernetes makes it much easier to automate and manage that infrastructure. what containers really are because Kubernetes is all about managing containers. So at a high level, containers are simply something that wraps software and independent and portable packages. And when we wrap software in these independent in portable packages, what we're doing is we're making it easy to run that software consistently in a variety of environments and ensure that it runs the same way regardless of what kind of environment it's in. Let's Start with the basic Setup of Kubernetes cluster using the ```Kubeadm``` utility._
- * _Network Plugin Used here is Flannel._
+ * _Network Plugin Used here is Flannel. Flannel is an overlay network provider that can be used with kubernetes_
+ * _kube-flannel.yml_
+    * _The `flannel` manifest defines four things:_
+   _1. A ClusterRole and ClusterRoleBinding for role based acccess control (RBAC)._
+   _2. A service account for `flannel` to use._
+   _3. A ConfigMap containing both a CNI configuration and a `flannel` configuration. The `network` in the `flannel` configuration should match the pod network CIDR. The           choice of `backend` is also made here and defaults to VXLAN._
+   _4. A DaemonSet for every architecture to deploy the `flannel` pod on each Node. The pod has two containers 1) the `flannel` daemon itself, and 2) an initContainer for           deploying the CNI configuration to a location that the `kubelet` can read._
+
+_When you run pods, they will be allocated IP addresses from the pod network CIDR. No matter which node those pods end up on, they will be able to communicate with each other._
  
 ## _Set-Up Architecture_
 
