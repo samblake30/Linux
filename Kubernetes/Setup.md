@@ -8,3 +8,26 @@
    <p align="center">
       <img width="500" height="450" src="https://github.com/samblake30/Linux/blob/main/Kubernetes/images/architecture.png">
    </p>
+
+## _Pre-Requisite_
+
+* _3 Servers with RHEL outof which 1 is going to be Master/Control-Plane and other 2 are going to be the Worker Nodes just as explained in above architecture._
+* _OS Red Hat Enterprise Linux 8.3 (Ootpa)  4 cores and min 4 GB RAM
+
+* _Let’s start how to install and configure Kubernetes in Redhat Enterprise Linux._
+***_Note_:-*** _You’ll also need a user account with sudo privileges and access to the root user account._
+
+### _Steps for Kubernetes Cluster Configuration:-_
+   * ***Steps1:-*** _Set Hostname with its IP address_
+      * _Chanage the Hostname and add the Hostname of all Hosts with those IP address in the ```/etc/hosts``` file (Consider all Hosts or VM as Nodes) as below_
+      ```bash
+         hostnamectl set-hostname k8s-app01
+         
+         cat /etc/hosts
+         192.168.2.49 k8s-app01
+         192.168.3.50 k8s-app02
+         192.168.5.51 k8s-app03
+      ```
+
+      
+
