@@ -5,6 +5,6 @@
  
 ## _Set-Up Architecture_
 
-   <p align="centre">
+   <p align="center">
       <img width="500" height="450" src="https://github.com/samblake30/Linux/blob/main/Kubernetes/images/architecture.png">
    </p>
