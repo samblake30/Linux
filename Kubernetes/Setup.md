@@ -13,7 +13,7 @@
 ## _Pre-Requisite_
 
 * _3 Servers with RHEL outof which 1 is going to be Master/Control-Plane and other 2 are going to be the Worker Nodes just as explained in above architecture._
-* _OS Red Hat Enterprise Linux 8.3 (Ootpa)  4 cores and min 4 GB RAM
+* _OS Red Hat Enterprise Linux 8.3 (Ootpa)  4 cores and min 4 GB RAM._
 
 * _Let’s start how to install and configure Kubernetes in Redhat Enterprise Linux._
 ***_Note_:-*** _You’ll also need a user account with sudo privileges and access to the root user account._
