@@ -54,7 +54,35 @@
           _Kubelet-API_                             :point_right:  | ***10250***         | ***TCP***
           _Read-Only Kubelet-API_                   :point_right:  | ***10255***         | ***TCP***
           _NodePort Services_                       :point_right:  | ***30000 - 32767*** | ***TCP***
-       
+    * ***Step5:-*** _To Install Docker and Kubernetes in nodes, need to configure docker and Kubernetes repositories_
+       * _Kubernetes Repo_
+       ```bash
+       ~ cat << EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+       > [kubernetes]
+       > name=Kubernetes
+       > baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+       > enabled=1
+       > gpgcheck=1
+       > repo_gpgcheck=1
+       > gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+                https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+       > EOF
+       ~ 
+       ```
+       * _Docker Repo configuration_
+       ```bash
+       ~ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+       ```
+    
+   * ***Step6:-*** _Install Kubernetes and Docker components_
+      ```bash
+      #On Master do below Commands
+      ~ yum install kubelet kubeadm kubectl docker -y
+      
+      #On Worker
+      ~ yum install kubelet docker -y
+      ```
+    
       
 
       
