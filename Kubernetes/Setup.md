@@ -98,8 +98,26 @@
       ~ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
       ~ sudo chown $(id -u):$(id -g) $HOME/.kube/config
       ```
+   * ***Step9:-*** _Check for the basic Kube-system pods up and running. We can run below command to check all the pods in namespaces_
+      ```bash
+      ~ kubectl get pods --all-namespaces
+      ```
+      * _We can see the coredns service not yet started, still in pending, So that we need to install flannel network plugin to run coredns to start pod network communication._
       
+   * ***Step10:-*** _Install Flannel Pod network driver_
+      * _Run the below command to install the POD network_
+      ```bash
+      ~ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+      ```
+      * _Now we can see coredns all pods in namespace are in ready and running successfully_
       
-
+   * ***Step11:-*** _Taint the master node as a master node_
+      * _Run the Below command to taint the master node and make as a master_
+      ```bash
+      ~ kubectl taint nodes --all node-role.kubernetes.io/master-
+      ```
       
-
+   * ***Step12:-*** _Join the worker nodes to master node either from command provided from ```step8``` or generate the new token with print join command_
+      ```bash
+      ~ kubeadm token create --print-join-command
+      ```      
