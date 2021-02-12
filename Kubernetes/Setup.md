@@ -5,10 +5,10 @@
  * _Network Plugin Used here is Flannel. Flannel is an overlay network provider that can be used with kubernetes_
  * _kube-flannel.yml_
     * _The `flannel` manifest defines four things:_
-   _1. A ClusterRole and ClusterRoleBinding for role based acccess control (RBAC)._
-   _2. A service account for `flannel` to use._
-   _3. A ConfigMap containing both a CNI configuration and a `flannel` configuration. The `network` in the `flannel` configuration should match the pod network CIDR. The           choice of `backend` is also made here and defaults to VXLAN._
-   _4. A DaemonSet for every architecture to deploy the `flannel` pod on each Node. The pod has two containers 1) the `flannel` daemon itself, and 2) an initContainer for           deploying the CNI configuration to a location that the `kubelet` can read._
+      * _1. A ClusterRole and ClusterRoleBinding for role based acccess control (RBAC)._
+      *  _2. A service account for `flannel` to use._
+      * _3. A ConfigMap containing both a CNI configuration and a `flannel` configuration. The `network` in the `flannel` configuration should match the pod network CIDR. The           choice of `backend` is also made here and defaults to VXLAN._
+      * _4. A DaemonSet for every architecture to deploy the `flannel` pod on each Node. The pod has two containers 1) the `flannel` daemon itself, and 2) an initContainer for           deploying the CNI configuration to a location that the `kubelet` can read._
 
 _When you run pods, they will be allocated IP addresses from the pod network CIDR. No matter which node those pods end up on, they will be able to communicate with each other._
  
